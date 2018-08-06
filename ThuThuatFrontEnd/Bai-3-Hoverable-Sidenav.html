@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tạo menu Hoverable Sidenav</title>
+	<link rel="stylesheet" href="">			
+</head>
+	<style>
+		#mySidenav a{
+			position: absolute;
+		    left: -80px; /* khi chưa hover cho left -80px */
+		    transition: 0.3s;
+		    padding: 15px;
+		    width: 100px;
+		    text-decoration: none;
+		    font-size: 20px;
+		    color: white;
+		    border-radius: 0 5px 5px 0;
+		}
+
+		#mySidenav a:hover {
+		   left: 0; /* khi hover cho left - 0, về vị trí cũ */
+		}
+		 
+		#about {
+		    top: 20px;
+		    background-color: #4CAF50;
+		}
+ 
+		#blog {
+		    top: 80px;
+		    background-color: #2196F3;
+		}
+		 
+		#projects {
+		    top: 140px;
+		    background-color: #f44336;
+		}
+ 
+		#contact {
+		    top: 200px;
+		    background-color: #555
+		}
+	</style>
+<body>
+	<!-- Hoverable Sidenav có thể hiểu như là một dạng menu động, mặc định nó sẽ không hiển thị nội dung, khi người dùng có tương tác với menu như hover hoặc click thì menu sẽ show ra nội dung của nó. -->
+	<div class="container">
+		<div id="mySidenav" class="sidenav">
+			<a href="#" id="about">about</a>
+			<a href="#" id="blog">blog</a>
+			<a href="#" id="projects">projects</a>
+			<a href="#" id="contact">contact</a>
+		</div>
+		<div style="margin-left:80px;">
+			<p>Di chuột lên nội dung để hiện thị menu</p>
+		</div>
+	</div>
+</body>
+</html>
