@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tạo menu Animated Side Navigation</title>
+	<link rel="stylesheet" href="">
+</head>
+	<style>
+		body {
+		    margin: 0px;
+		}
+
+		.container {
+		    width: 60%;
+		    margin: auto;
+		}
+
+		.sidenav {
+		    height: 100%;
+		    width: 0;
+		    position: fixed;
+		    z-index: 1;
+		    top: 0;
+		    left: 20%;
+		    background-color: #333333;
+		    overflow-x: hidden;
+		    transition: 0.5s;
+		    padding-top: 60px;
+		}
+		 
+		.sidenav a {
+		    padding: 8px 8px 8px 32px;
+		    text-decoration: none;
+		    font-size: 25px;
+		    color: #818181;
+		    display: block;
+		    transition: 0.3s;
+		}
+		 
+		.sidenav a:hover, .offcanvas a:focus{
+		    color: #f1f1f1;
+		}
+		 
+		.sidenav .closebtn {
+		    position: absolute;
+		    top: 0;
+		    right: 25px;
+		    font-size: 36px;
+		    margin-left: 50px;
+		}
+		 
+		#main {
+		    transition: margin-left .5s;
+		    padding: 16px;
+		}
+
+	</style>
+<body>
+	<!-- Animated Side Navigation là một dạng Navbar có thể ẩn/hiện thông qua các button, Animated Side Navigation thường được ẩn đi khi mới load trang và chỉ được hiển thị khi người dùng muốn sử dụng nó. -->
+	<div class="container">
+	    <div id="mySidenav" class="sidenav">
+	        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	        <a href="#home">Trang chủ</a>
+	        <a href="#news">Học lập trình online</a>
+	        <a href="#contact">Thủ thuật</a>
+	        <a href="#about">Liên hệ</a>
+	    </div>
+	    <div id="main">
+	        <p>Click vào nút Open để mở phần menu ẩn.</p>
+	        <span style=" font-size:30px; cursor:pointer " onclick="openNav()">&#9776; open</span>
+	    </div>
+	</div>
+
+	<script>
+	    function openNav() {
+	        document.getElementById("mySidenav").style.width = "250px";
+	        document.getElementById("main").style.marginLeft = "250px";
+	    }
+	 
+	    function closeNav() {
+	        document.getElementById("mySidenav").style.width = "0";
+	        document.getElementById("main").style.marginLeft= "0";
+	    }
+	</script>
+</body>
+</html>
